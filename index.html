@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/list.js"></script>
+    <style>
+        #sortable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+        }
+
+            #sortable li {
+                margin: 0 3px 3px 3px;
+                padding: 0.4em;
+                padding-left: 1.5em;
+                font-size: 1.4em;
+                height: 18px;
+            }
+
+                #sortable li span {
+                    position: absolute;
+                    margin-left: -1.3em;
+                }
+    </style>
+    <script>
+        $(function () {
+            $("#formContainer").sortable();
+            $("#formContainer").disableSelection();
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right" role="form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Form Maker 1.0</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Add Element</h2>
+                <div id="addListElement" class="btn btn-default col-me-12"><span class="glyphicon glyphicon-plus" style="margin-right:5px;"></span>New List Item</div>
+                <div id="addRadioElement" class="btn btn-default col-me-12"><span class="glyphicon glyphicon-plus" style="margin-right:5px;"></span>New Radio Item</div>
+                <div id="addCheckboxElement" class="btn btn-default col-me-12"><span class="glyphicon glyphicon-plus" style="margin-right:5px;"></span>New Checkbox Item</div>
+            </div>
+            <div class="col-md-9">
+                <h2>List</h2>
+                <div id="formContainer">
+                    <div class="btn btn-default col-md-12 ui-state-default listItem" href="#" role="button">List Item &raquo;</div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; Chase Shaw 2013</p>
+        </footer>
+    </div> <!-- /container -->
+</body>
+</html>
